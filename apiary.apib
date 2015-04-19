@@ -244,24 +244,18 @@ Direct managment
 
 ### Direct Detais [GET]
 + Response 200 (application/json)
-
     + Body
 
             {}
 
 ### Direct update [POST]
 + Response 200 (application/json)
-
     + Body
 
             {}
 
 ### Delete direct [DELETE]
-+ Response 200 (application/json)
-
-    + Body
-
-            {}
++ Response 204
 
 ## Group Applications
 
@@ -273,7 +267,6 @@ Applications introduction
     
 ### List all applications [GET]
 + Response 200 (applications/json)
-
     + Body
         
             {
@@ -329,7 +322,6 @@ Applications introduction
 
 ### Create application [POST]
 + Request (applications/json)
-
     + Body
     
             {
@@ -339,7 +331,6 @@ Applications introduction
             }
 
 + Response 200 (applications/json)
-    
     + Headers
 
             Location: http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-12882ebd-0441-4213-b77a-d3130f33541f-59183
@@ -385,7 +376,6 @@ Applications introduction
     
 ### Application details [GET]
 + Response 200 (applications/json)
-
     + Body
     
             {
@@ -430,7 +420,6 @@ Applications introduction
             }
             
 + Response 200 (applications/json)
-
     + Body
     
             {
@@ -466,7 +455,7 @@ Applications introduction
             }
             
 ### App Delete [DELETE]
-+ Response 204 (applications/json)
++ Response 204
             
 ## Group Endpoints
 
@@ -478,13 +467,22 @@ Endpoints description
 
 ### List all endpoints [GET]
 + Response 200 (applications/json)
-
     + Body
         
             {}
 
 ### Create endpoint [POST]
++ Request (applications/json)
+    + Body
+    
+            {
+
+            }
+
 + Response 200 (applications/json)
+    + Headers
+
+            Location: http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-12882ebd-0441-4213-b77a-d3130f33541f-59183
 
     + Body
         
@@ -497,24 +495,18 @@ Endpoints description
 
 ### Endpoint details [GET]
 + Response 200 (applications/json)
-
     + Body
         
             {}
 
 ### Endpoint update [POST]
 + Response 200 (applications/json)
-
     + Body
         
             {}
 
 ### Delete [DELETE]
-+ Response 200 (applications/json)
-
-    + Body
-        
-            {}
++ Response 204
 
 ## Group Values
 
@@ -527,7 +519,6 @@ Values description
 
 ### List all sources [GET]
 + Response 200 (applications/json)
-
     + Body
         
             {}
@@ -540,17 +531,12 @@ Values description
     
 ### Source details [GET]
 + Response 200 (applications/json)
-
     + Body
         
             {}
 
 ### Delete source [DELETE]
-+ Response 200 (applications/json)
-
-    + Body
-        
-            {}
++ Response 204
 
 ## Slot operation [/users/{userUUID}/values/{serviceId}/{sourceId}/{slotNo}]
 + Parameters
@@ -560,8 +546,4 @@ Values description
     + slotNo (required, string, `1`) ... The page of questions to return
     
 ### Delete slot [DELETE]
-+ Response 200 (applications/json)
-
-    + Body
-        
-            {}
++ Response 204 
