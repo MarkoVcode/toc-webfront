@@ -212,11 +212,11 @@ Users managenent
 
 Direct managment
 
-## Direct collection [/users/{userUUID}/directs]
+## Directs Collection [/users/{userUUID}/directs]
 + Parameters
     + userUUID (required, string, `U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838`) ... The page of questions to return
 
-### List All Directs Details [GET]
+### List All Directs [GET]
 + Response 200 (application/json)
     + Headers
 
@@ -226,7 +226,7 @@ Direct managment
     
             {}
             
-### Add Direct [POST]
+### Create a New Direct [POST]
 + Request (applications/json)
     + Body
     
@@ -241,7 +241,7 @@ Direct managment
     
             {}
             
-## Direct single [/users/{userUUID}/directs/{directUUID}]
+## Direct Single [/users/{userUUID}/directs/{directUUID}]
 + Parameters
     + userUUID (required, string, `U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838`) ... The page of questions to return
     + directUUID (required, string, `1`) ... The page of questions to return
