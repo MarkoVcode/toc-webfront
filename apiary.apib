@@ -276,7 +276,56 @@ Applications introduction
 
     + Body
         
-            {}
+            {
+              "self": {
+                "id": null,
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications"
+              },
+              "owner": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "parent": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "applications": [
+                {
+                  "self": {
+                    "id": "P-0ba20202-051b-4c14-8806-f65da33b9f1e-98346",
+                    "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-0ba20202-051b-4c14-8806-f65da33b9f1e-98346"
+                  },
+                  "id": "P-0ba20202-051b-4c14-8806-f65da33b9f1e-98346",
+                  "name": "myDirect4ReadApp",
+                  "authType": "basic",
+                  "resources": "/direct",
+                  "internal": false,
+                  "userKey": "EMVuRWxA50SmbuVwtw0heq7bbsndfLXnIxOnVKpq_myDirect4ReadApp",
+                  "userSecret": null,
+                  "used": null,
+                  "created": "2015-04-06T11:49:17.634+01:00",
+                  "lastUsed": null,
+                  "updated": null
+                },
+                {
+                  "self": {
+                    "id": "P-39420e02-b128-4e7e-858f-766f3ccc4972-74395",
+                    "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-39420e02-b128-4e7e-858f-766f3ccc4972-74395"
+                  },
+                  "id": "P-39420e02-b128-4e7e-858f-766f3ccc4972-74395",
+                  "name": "myDirect3ReadApp",
+                  "authType": "oauth",
+                  "resources": "/direct",
+                  "internal": false,
+                  "userKey": "enzmgdqItrKncOlOYjXxRKTDE0syF9idsItPWrK2_myDirect3ReadApp",
+                  "userSecret": null,
+                  "used": null,
+                  "created": "2015-04-06T11:49:17.631+01:00",
+                  "lastUsed": null,
+                  "updated": null
+                }
+              ]
+            }
 
 ### Create application [POST]
 + Response 200 (applications/json)
@@ -298,18 +347,52 @@ Applications introduction
             {}
             
 ### Application update [POST]
++ Request (application/json)
+
+            {
+              "name": "DwpD3GTiDpguCun9jTNEW",
+              "authType": "basic",
+              "resources": "/users,/ping"
+            }
+            
 + Response 200 (applications/json)
 
     + Body
     
-            {}
+            {
+              "self": {
+                "id": "P-620e55aa-c533-4dd0-b75f-056fbe2f014b-75323",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-620e55aa-c533-4dd0-b75f-056fbe2f014b-75323"
+              },
+              "owner": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "parent": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "application": {
+                "self": {
+                  "id": "P-620e55aa-c533-4dd0-b75f-056fbe2f014b-75323",
+                  "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-620e55aa-c533-4dd0-b75f-056fbe2f014b-75323"
+                },
+                "id": "P-620e55aa-c533-4dd0-b75f-056fbe2f014b-75323",
+                "name": "DwpD3GTiDpguCun9jTNEW",
+                "authType": "basic",
+                "resources": "/users,/ping",
+                "internal": false,
+                "userKey": "5iVdN5ACDFG1Eqldt178Nsw7dr789IhT5OWregve_DwpD3GTiDpguCun9jT",
+                "userSecret": null,
+                "used": null,
+                "created": "2015-04-18T06:59:35.954+01:00",
+                "lastUsed": null,
+                "updated": "2015-04-18T06:59:36.157+01:00"
+              }
+            }
             
 ### App Delete [DELETE]
-+ Response 200 (applications/json)
-
-    + Body
-    
-            {}
++ Response 204 (applications/json)
             
 ## Group Endpoints
 
