@@ -328,23 +328,93 @@ Applications introduction
             }
 
 ### Create application [POST]
++ Request (applications/json)
+
+    + Body
+    
+            {
+                "name": "thisIsMyApplication_success",
+                "authType": "oauth",
+                "resources": "/users"
+            }
+
 + Response 200 (applications/json)
 
     + Body
         
-            {}
+            {
+              "self": {
+                "id": "P-12882ebd-0441-4213-b77a-d3130f33541f-59183",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-12882ebd-0441-4213-b77a-d3130f33541f-59183"
+              },
+              "owner": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "parent": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "application": {
+                "self": {
+                  "id": "P-12882ebd-0441-4213-b77a-d3130f33541f-59183",
+                  "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-12882ebd-0441-4213-b77a-d3130f33541f-59183"
+                },
+                "id": "P-12882ebd-0441-4213-b77a-d3130f33541f-59183",
+                "name": "thisIsMyApplication_success",
+                "authType": "oauth",
+                "resources": "/users",
+                "internal": false,
+                "userKey": "H4u2RUI94JYH2OzSHYedmXHmnEJ4DfqYjnn1XKKg_thisIsMyApplication_success",
+                "userSecret": "Lpb9m5XVhBWAklpvxRv2dhsaOkvpYPn4QGerighvVty8X4L1GNv7fSl5MhMe3XdaCs3C8BGSD7K5806KITIBYPHWWK",
+                "used": null,
+                "created": "2015-04-18T08:12:58.264+01:00",
+                "lastUsed": null,
+                "updated": null
+              }
+            }
             
 ## Application single [/users/{userUUID}/applications/{applicationUUID}]
 + Parameters
     + userUUID (required, string, `U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838`) ... The page of questions to return
-    + applicationUUID (required, string, `1`) ... The page of questions to return
+    + applicationUUID (required, string, `P-0182b795-171a-41eb-938f-05255be321c8-71385`) ... The page of questions to return
     
 ### Application details [GET]
 + Response 200 (applications/json)
 
     + Body
     
-            {}
+            {
+              "self": {
+                "id": "P-0182b795-171a-41eb-938f-05255be321c8-71385",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-0182b795-171a-41eb-938f-05255be321c8-71385"
+              },
+              "owner": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "parent": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "application": {
+                "self": {
+                  "id": "P-0182b795-171a-41eb-938f-05255be321c8-71385",
+                  "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications/P-0182b795-171a-41eb-938f-05255be321c8-71385"
+                },
+                "id": "P-0182b795-171a-41eb-938f-05255be321c8-71385",
+                "name": "thisIsMyApplication_success",
+                "authType": "oauth",
+                "resources": "/users",
+                "internal": false,
+                "userKey": "eqa8azmnV4UCVYDMAzq9SXw6ORw7bhZsnRYA28gb_thisIsMyApplication_success",
+                "userSecret": null,
+                "used": null,
+                "created": "2015-04-18T07:52:21.107+01:00",
+                "lastUsed": null,
+                "updated": null
+              }
+            }
             
 ### Application update [POST]
 + Request (application/json)
