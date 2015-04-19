@@ -188,7 +188,6 @@ Users managenent
 
 ### List All Users [GET]
 + Response 200 (application/json)
-
     + Body
         
             {}
@@ -199,14 +198,12 @@ Users managenent
 
 ### User details [GET]
 + Response 200 (application/json)
-
     + Body
         
             {}
             
 ### User update [POST]
 + Response 200 (application/json)
-
     + Body
         
             {}
@@ -219,9 +216,8 @@ Direct managment
 + Parameters
     + userUUID (required, string, `U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838`) ... The page of questions to return
 
-### List All Directs [GET]
+### List All Directs Details [GET]
 + Response 200 (application/json)
-
     + Headers
 
             Link: </questions?page=2>; rel="next"
@@ -230,9 +226,17 @@ Direct managment
     
             {}
             
-### Directs create [POST]
-+ Response 200 (application/json)
+### Add Direct [POST]
++ Request (applications/json)
+    + Body
+    
+            {
+                "name": "thisIsMyApplication_success",
+                "authType": "oauth",
+                "resources": "/users"
+            }
 
++ Response 200 (application/json)
     + Body
     
             {}
@@ -242,19 +246,28 @@ Direct managment
     + userUUID (required, string, `U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838`) ... The page of questions to return
     + directUUID (required, string, `1`) ... The page of questions to return
 
-### Direct Detais [GET]
+### Single Direct Details [GET]
 + Response 200 (application/json)
     + Body
 
             {}
 
-### Direct update [POST]
+### Direct Update [POST]
++ Request (applications/json)
+    + Body
+    
+            {
+                "name": "thisIsMyApplication_success",
+                "authType": "oauth",
+                "resources": "/users"
+            }
+
 + Response 200 (application/json)
     + Body
 
             {}
 
-### Delete direct [DELETE]
+### Delete Direct [DELETE]
 + Response 204
 
 ## Group Applications
@@ -412,7 +425,8 @@ Applications introduction
             
 ### Application update [POST]
 + Request (application/json)
-
+    + Body
+    
             {
               "name": "DwpD3GTiDpguCun9jTNEW",
               "authType": "basic",
@@ -500,6 +514,15 @@ Endpoints description
             {}
 
 ### Endpoint update [POST]
++ Request (applications/json)
+    + Body
+    
+            {
+                "name": "thisIsMyApplication_success",
+                "authType": "oauth",
+                "resources": "/users"
+            }
+
 + Response 200 (applications/json)
     + Body
         
