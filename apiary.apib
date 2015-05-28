@@ -204,7 +204,51 @@ as it will be necessary to make any other API calls from now on.
 + Response 200 (application/json)
     + Body
         
-            {}
+            {
+              "self": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "owner": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "parent": {
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+              },
+              "user": {
+                "self": {
+                  "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                  "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838"
+                },
+                "id": "U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838",
+                "email": "name.surname@email.com",
+                "password": null,
+                "username": "Name",
+                "usersurname": "Surname",
+                "timezone": "Europe/London",
+                "group": null,
+                "children": {
+                  "applications": {
+                    "id": null,
+                    "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/applications"
+                  },
+                  "directs": {
+                    "id": null,
+                    "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/directs"
+                  },
+                  "endpoints": {
+                    "id": null,
+                    "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/endpoints"
+                  },
+                  "values": {
+                    "id": null,
+                    "href": "http://localhost:8189/api/v1/users/U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838/values"
+                  }
+                }
+              }
+            }
         
 ## User Single [/users/{userUUID}]
 
@@ -273,12 +317,12 @@ Following fields can be updated:
 
 + Request (application/json)
 
-            {
-                "password": "MyNewPassword",
-                "username": "NewName",
-                "usersurname": "NewSurname",
-                "timezone": "Europe/Lisbon",
-            }
+        {
+            "password": "MyNewPassword",
+            "username": "NewName",
+            "usersurname": "NewSurname",
+            "timezone": "Europe/Lisbon",
+        }
             
 + Response 200 (application/json)
     + Body
