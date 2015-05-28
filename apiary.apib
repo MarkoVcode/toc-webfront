@@ -3,9 +3,16 @@ HOST: http://polls.apiblueprint.org/
 
 # Public Service API
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+The purpose of the API is to provide simple way to manage collections of values gathered from remote sensors via Direct service.
 
-# Polls API Root [/]
+Following operations can be performed:
++ managing (create/delete/update) external entry points for sensors
++ controlling access to the entry points
++ sharing values from sensors
++ managing types of values
++ analizing historical values
+
+# Polls API Root [/sdfsdfsf/sdfsffd]
 
 This resource does not have any attributes. Instead it offers the initial
 API affordances in the form of the links in the JSON body.
@@ -182,9 +189,16 @@ form of choices.
 
 ## Group User
 
-Users managenent
+This resource is responsible for providing information about the current user. 
 
 ## Users Collection [/users]
+
+Lists users in behalf of which all the further operations can be performed.
+
+You need to request this resource if you do not know what is the userUUID 
+as it will be necessary to make any other API calls from now on.
+
+
 
 ### List All Users [GET]
 + Response 200 (application/json)
