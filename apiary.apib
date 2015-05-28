@@ -195,10 +195,10 @@ This resource is responsible for providing information about the current user.
 
 Lists users in behalf of which all the further operations can be performed.
 
-You need to request this resource if you do not know what is the userUUID 
+The resource must be requested in case when *userUUID* is not known  
 as it will be necessary to make any other API calls from now on.
 
-
+*userUUID* will never change and it can be cached locally.
 
 ### List All Users [GET]
 + Response 200 (application/json)
@@ -207,6 +207,14 @@ as it will be necessary to make any other API calls from now on.
             {}
         
 ## User Single [/users/{userUUID}]
+
+Retrievs details of the particular user and updates it.
+
+Following fields can be updated:
++ **name**
++ **surname**
++ **password**
+
 + Parameters
     + userUUID (required, string, `U-f8053d8e-68b7-4a75-a218-83efd09cdca7-35838`) ... The page of questions to return
 
